@@ -44,3 +44,24 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## GitHub Pages test deployment
+
+The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the
+site whenever a commit is pushed to `main`. It uses `/re-wellnes` as the
+GitHub Pages public path without changing the regular production build used by
+other hosting providers.
+
+One-time repository setup:
+
+1. Open **Settings → Pages** in the GitHub repository.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. Push the workflow and site changes to `main`.
+4. Follow the **Deploy to GitHub Pages** run in the repository's **Actions** tab.
+
+After deployment, the test site is available at:
+
+`https://carlosgonza3.github.io/re-wellnes/`
+
+When moving to Netlify later, no GitHub Pages path needs to be removed from
+`package.json`; the `/re-wellnes` path exists only in the Pages workflow.
