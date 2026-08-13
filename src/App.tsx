@@ -81,7 +81,7 @@ const cards = [
 const benefits = [
   {
     title: 'Planes y sesiones personalizadas',
-    description: <>Para ti y tus objetivos.</>,
+    description: <>Para tí y tus objetivos.</>,
     icon: User,
   },
   {

@@ -713,12 +713,14 @@ a {
   .service-copy h2 {
     font-size: 1.2rem;
     line-height: 1.08;
+    padding-left: 0;
   }
 
   .service-copy p {
     font-size: 1rem;
     line-height: 1.15;
     margin: 25px 0 0;
+    padding-left: 0;
   }
 
   .benefits {
@@ -976,6 +978,7 @@ a {
 
   .service-copy h2 {
     font-size: clamp(0.76rem, 3.5vw, 0.92rem);
+    padding-left: 0;
     line-height: 1.08;
   }
 
@@ -983,6 +986,7 @@ a {
     font-size: clamp(0.68rem, 3vw, 0.8rem);
     line-height: 1.16;
     margin-top: 17px;
+    padding-left: 0;
   }
 
   .benefits {
@@ -1068,7 +1072,7 @@ a {
   }
 
   .mobile-sticky-brand small {
-    font-size: 0.62rem;
+    font-size: 0.82rem;
     margin-top: 3px;
   }
 
