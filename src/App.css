@@ -11,6 +11,7 @@ html,
 body {
   background: var(--white);
   color: var(--black);
+  overscroll-behavior: none;
 }
 
 a {
@@ -208,7 +209,7 @@ a {
 }
 
 .card-overlay {
-  background: linear-gradient(90deg, rgba(5, 7, 5, 0.48), rgba(8, 10, 7, 0.11));
+  background: linear-gradient(90deg, rgba(5, 7, 5, 0.18), rgba(8, 10, 7, 0.11));
   pointer-events: none;
 }
 
@@ -232,7 +233,7 @@ a {
 .service-icon {
     fill: none;
     height: 35px;
-    left: 17px;
+    left: 15px;
     position: absolute;
     stroke: white;
     stroke-linecap: round;
@@ -243,7 +244,7 @@ a {
 }
 
 .service-copy {
-  margin-left: 1rem;
+  margin-left: 15px;
   position: absolute;
   top: 22px;
 }
@@ -254,6 +255,7 @@ a {
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+  padding-left: 0.8rem;
   text-transform: uppercase;
 }
 
@@ -262,6 +264,7 @@ a {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 0.8rem;
+  padding-left: 0.8rem;
 }
 
 .benefits {
@@ -271,7 +274,7 @@ a {
   justify-content: center;
   align-content: center;
   width: 100%;
-  margin-top: 0.7rem;
+  margin-top: .7rem;
 }
 
 .benefit {
@@ -336,6 +339,135 @@ a {
 
   .service-icon {
     left: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-footer {
+    align-items: center;
+    background: #f4f4f4;
+    color: #4a4a4a;
+    display: flex;
+    font-family: 'Albert Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 clamp(24px, 4vw, 72px);
+    text-transform: capitalize;
+    width: 100%;
+  }
+
+  .mobile-footer strong {
+    color: #151515;
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1860px) {
+  .landing-page {
+    display: block;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .hero-section {
+    height: max(62.35vh, 449px);
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .service-card {
+    flex: 0 0 25%;
+    min-width: 0;
+  }
+
+  .service-copy {
+    left: 62px;
+    margin-left: 0;
+    right: 18px;
+  }
+
+  .benefits {
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    margin-top: 0;
+    min-height: max(11.7vh, 90px);
+  }
+
+  .benefit {
+    flex: 0 0 25%;
+    min-width: 0;
+  }
+
+  .benefit h3,
+  .benefit p {
+    white-space: normal;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1359px) {
+  .contact-header {
+    left: 4vw;
+  }
+
+  .contact-links {
+    gap: clamp(12px, 2vw, 24px);
+    padding-left: clamp(36px, 6vw, 72px);
+  }
+
+  .contact-links a {
+    font-size: clamp(0.68rem, 1.2vw, 0.9rem);
+  }
+
+  .hero-message {
+    left: 4vw;
+  }
+
+  .hero-message h1 {
+    font-size: clamp(2rem, 4.2vw, 3.5rem);
+  }
+
+  .hero-message p {
+    font-size: 1.2rem;
+  }
+
+  .service-card {
+    flex-basis: 50%;
+  }
+
+  .service-card:nth-child(3),
+  .service-card:nth-child(4) {
+    border-top: 2px solid #fff;
+  }
+
+  .service-card:nth-child(3) {
+    border-left: 4px solid #fff;
+  }
+
+  .benefits {
+    min-height: 230px;
+  }
+
+  .benefit {
+    flex-basis: 50%;
+    min-height: 115px;
+    padding: 28px 5vw;
+  }
+
+  .benefit:nth-child(even)::after {
+    display: none;
+  }
+
+  .benefit:nth-child(n + 3) {
+    border-top: 1px solid #dedede;
   }
 }
 
@@ -434,13 +566,14 @@ a {
   }
 
   .hero-message p {
-    bottom: 10rem;
+    bottom: auto;
     font-size: 1.1rem;
     left: 12%;
     line-height: 1.22;
     margin: 0;
     position: absolute;
     text-align: center;
+    top: calc(70% + 1rem);
     width: 100%;
   }
 
@@ -468,7 +601,7 @@ a {
   .mobile-scroll-cue {
     align-items: center;
     animation: mobile-scroll-pulse 1.6s ease-in-out infinite;
-    bottom: 14px;
+    bottom: 32px;
     display: flex;
     justify-content: center;
     left: 50%;
@@ -724,6 +857,235 @@ a {
     50% {
       transform: translate(-50%, 6px);
     }
+  }
+}
+
+@media (max-width: 489px) {
+  .landing-page {
+    padding-top: 104px;
+  }
+
+  .mobile-sticky-brand {
+    height: 104px;
+    padding: 0;
+  }
+
+  .mobile-sticky-brand a {
+    margin-top: 0;
+  }
+
+  .mobile-sticky-brand img {
+    height: 72px;
+    object-fi: cover;
+    width: 112px;
+  }
+
+  .mobile-sticky-brand small {
+    font-size: 0.72rem;
+    margin-top: 5px;
+  }
+
+  .hero-section {
+    height: calc(100svh - 104px);
+    margin-top: 0;
+    min-height: 540px;
+  }
+
+  .hero-message {
+    width: 100%;
+  }
+
+  .hero-message h1 {
+    font-size: clamp(1.35rem, 7vw, 1.75rem);
+    left: 7vw;
+    line-height: 1.08;
+    top: 16px;
+    width: 72%;
+  }
+
+  .hero-message p {
+    bottom: auto;
+    font-size: 1rem;
+    left: 7%;
+    line-height: 1.22;
+    top: calc(78% + 30px);
+    width: 86%;
+  }
+
+  .hero-image {
+    height: 78%;
+  }
+
+  .hero-image::before {
+    height: 27%;
+  }
+
+  .mobile-scroll-cue {
+    bottom: calc(28px + env(safe-area-inset-bottom));
+  }
+
+  .services {
+    gap: 0.75rem;
+    grid-auto-rows: clamp(148px, 43vw, 172px);
+    grid-template-rows: none;
+    min-height: 0;
+    padding: 8px 16px 18px;
+  }
+
+  .service-card,
+  .service-card:first-child,
+  .service-card:last-child {
+    min-height: 0;
+  }
+
+  .service-card > img {
+    height: calc(100% - 24px);
+    top: 8px;
+    width: 46%;
+  }
+
+  .service-icon {
+    height: 29px;
+    padding-right: 0.35rem;
+    top: 11px;
+    width: 29px;
+  }
+
+  .service-card:nth-child(odd) .service-icon {
+    left: calc(46% + 9px);
+  }
+
+  .service-card:nth-child(even) .service-icon {
+    left: 0;
+  }
+
+  .service-copy {
+    top: 12px;
+  }
+
+  .service-card:nth-child(odd) .service-copy {
+    left: calc(46% + 42px);
+  }
+
+  .service-card:nth-child(even) .service-copy {
+    left: 34px;
+    right: 46%;
+  }
+
+  .service-copy h2 {
+    font-size: clamp(0.76rem, 3.5vw, 0.92rem);
+    line-height: 1.08;
+  }
+
+  .service-copy p {
+    font-size: clamp(0.68rem, 3vw, 0.8rem);
+    line-height: 1.16;
+    margin-top: 17px;
+  }
+
+  .benefits {
+    gap: 24px;
+    min-height: 350px;
+    padding: 25px 7% 25px 13%;
+  }
+
+  .benefits::before {
+    left: calc(13% + 39px);
+  }
+
+  .benefit {
+    gap: 30px;
+  }
+
+  .benefit-icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .benefit h3 {
+    font-size: clamp(0.72rem, 3.3vw, 0.84rem);
+  }
+
+  .benefit p {
+    font-size: clamp(0.68rem, 3.05vw, 0.8rem);
+  }
+
+  .mobile-contact {
+    min-height: 390px;
+    padding: 31px 20px 28px;
+  }
+
+  .mobile-contact h2 {
+    font-size: 1.55rem;
+    margin-bottom: 25px;
+  }
+
+  .mobile-contact-links {
+    gap: 21px;
+  }
+
+  .mobile-contact-links a {
+    font-size: 0.86rem;
+    gap: 8px;
+  }
+
+  .mobile-contact-links img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .mobile-contact-cta {
+    font-size: 0.78rem;
+    margin-top: 27px;
+  }
+
+  .mobile-footer {
+    font-size: 0.48rem;
+    padding: 0 12px;
+  }
+
+  .mobile-footer strong {
+    font-size: 0.46rem;
+  }
+}
+
+@media (max-width: 489px) and (max-height: 680px) {
+  .landing-page {
+    padding-top: 88px;
+  }
+
+  .mobile-sticky-brand {
+    height: 88px;
+  }
+
+  .mobile-sticky-brand img {
+    height: 48px;
+    width: 96px;
+  }
+
+  .mobile-sticky-brand small {
+    font-size: 0.62rem;
+    margin-top: 3px;
+  }
+
+  .hero-section {
+    height: calc(100svh - 88px);
+    min-height: 480px;
+  }
+
+  .hero-message h1 {
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+    top: 12px;
+  }
+
+  .hero-message p {
+    bottom: auto;
+    font-size: 0.66rem;
+    top: calc(77% + 10px);
+  }
+
+  .hero-image {
+    height: 77%;
   }
 }
 
