@@ -48,9 +48,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## GitHub Pages test deployment
 
 The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the
-site whenever a commit is pushed to `main`. It uses `/re-wellnes` as the
-GitHub Pages public path without changing the regular production build used by
-other hosting providers.
+site whenever a commit is pushed to `main`. It derives the GitHub Pages public
+path from the current repository name without changing the regular production
+build used by other hosting providers.
 
 One-time repository setup:
 
@@ -61,7 +61,7 @@ One-time repository setup:
 
 After deployment, the test site is available at:
 
-`https://carlosgonza3.github.io/re-wellnes/`
+`https://carlosgonza3.github.io/re-wellness/`
 
 When moving to Netlify later, no GitHub Pages path needs to be removed from
-`package.json`; the `/re-wellnes` path exists only in the Pages workflow.
+`package.json`; the repository path exists only in the Pages workflow.

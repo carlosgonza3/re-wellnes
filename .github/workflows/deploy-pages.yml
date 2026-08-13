@@ -37,7 +37,7 @@ jobs:
 
       - name: Build site for GitHub Pages
         env:
-          PUBLIC_URL: /re-wellnes
+          PUBLIC_URL: /${{ github.event.repository.name }}
         run: npm run build
 
       - name: Configure GitHub Pages
