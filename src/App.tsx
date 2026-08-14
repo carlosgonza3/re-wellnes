@@ -18,11 +18,11 @@ import {
   Wind,
 } from 'lucide-react';
 
-import hielo from './assets/images/hielo.jpg';
-import movimiento from './assets/images/movimiento.jpg';
-import recuperacion from './assets/images/recuperacion.jpg';
-import respiracion from './assets/images/respiracion.png';
-import hero from './assets/images/hero-1.png';
+import hielo from './assets/images/hielo.webp';
+import movimiento from './assets/images/movimiento.webp';
+import recuperacion from './assets/images/recuperacion.webp';
+import respiracion from './assets/images/respiracion.webp';
+import hero from './assets/images/hero-1.webp';
 
 const contactIcons = {
   instagram: instagramIcon,

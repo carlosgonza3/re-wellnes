@@ -1,67 +1,42 @@
-# Getting Started with Create React App
+# RE Wellness & Recovery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Responsive React landing page for RE Wellness & Recovery.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+The production and Netlify builds use Node.js 22, pinned in `.nvmrc`.
 
-### `npm start`
+```bash
+nvm use
+npm ci
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Release checks
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Run the same verification command Netlify uses:
 
-### `npm test`
+```bash
+npm run verify
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This runs the non-interactive test suite and creates the optimized production
+bundle in `build/`.
 
-### `npm run build`
+## Netlify deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The repository-level `netlify.toml` is the source of truth:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Build command: `npm run verify`
+- Publish directory: `build`
+- Node.js: 22 (from `.nvmrc`)
+- Production security and cache headers: configured in `netlify.toml`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the full launch, DNS, HTTPS, and rollback checklist, see
+[docs/NETLIFY_RELEASE.md](docs/NETLIFY_RELEASE.md).
 
-### `npm run eject`
+## GitHub Pages preview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## GitHub Pages test deployment
-
-The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the
-site whenever a commit is pushed to `main`. It derives the GitHub Pages public
-path from the current repository name without changing the regular production
-build used by other hosting providers.
-
-One-time repository setup:
-
-1. Open **Settings → Pages** in the GitHub repository.
-2. Under **Build and deployment**, choose **GitHub Actions** as the source.
-3. Push the workflow and site changes to `main`.
-4. Follow the **Deploy to GitHub Pages** run in the repository's **Actions** tab.
-
-After deployment, the test site is available at:
-
-`https://carlosgonza3.github.io/re-wellness/`
-
-When moving to Netlify later, no GitHub Pages path needs to be removed from
-`package.json`; the repository path exists only in the Pages workflow.
+The workflow in `.github/workflows/deploy-pages.yml` remains available as a
+preview deployment. Its repository-specific `PUBLIC_URL` is scoped to that
+workflow and does not affect the root-based Netlify build.
