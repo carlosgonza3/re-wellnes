@@ -135,9 +135,9 @@ function App() {
             </a>
 
             <div className="contact-links">
-              <a href="https://wa.me/50378536868" aria-label="WhatsApp +503 7853-6868" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/50378526868" aria-label="WhatsApp +503 7852-6868" target="_blank" rel="noopener noreferrer">
                 <Icon name="whatsapp" alt="Whatsapp Logo"/>
-                <span>+503 7853-6868</span>
+                <span>+503 7852-6868</span>
               </a>
               <a href="mailto:rewellness@gmail.com">
                 <Icon name="mail" alt="Email Icon"/>
@@ -211,9 +211,9 @@ function App() {
             <Icon name="instagram" alt="" />
             <span>@rewellnessco</span>
           </a>
-          <a href="https://wa.me/50378536868" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/50378526868" target="_blank" rel="noopener noreferrer">
             <Icon name="whatsapp" alt="" />
-            <span>+503 7853-6868</span>
+            <span>+503 7852-6868</span>
           </a>
           <a href="mailto:rewellness@gmail.com">
             <Icon name="mail" alt="" />
@@ -221,8 +221,8 @@ function App() {
           </a>
         </div>
 
-        <a className="mobile-contact-cta" href="https://wa.me/50378536868" target="_blank" rel="noopener noreferrer">
-          ¡Agenda tu consulta!
+        <a className="mobile-contact-cta" href="https://wa.me/50378526868" target="_blank" rel="noopener noreferrer">
+          ¡Agenda tu sesión!
         </a>
       </section>
 
